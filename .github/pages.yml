@@ -1,0 +1,8 @@
+# GitHub Pages configuration
+# This file tells GitHub Pages to serve files from the 'public' directory
+
+# Source directory for GitHub Pages
+source_dir: public
+
+# Output directory (this will be the root of the deployed site)
+destination_dir: .
