@@ -1,0 +1,55 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif; /* Cartoon-like font */
+}
+
+.container {
+    text-align: center;
+    font-size: 3em; /* Default large size for headers */
+}
+
+.red, .yellow, .blue, .green, .purple {
+    color: red; /* Set text color */
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000; /* Black border effect */
+}
+
+.footer-links {
+    margin-top: 20px; /* Adds space above the footer links */
+}
+
+.footer-links p {
+    margin-top: 5px; /* Adds space between the paragraphs */
+    font-size: 16px; /* Sets the font size */
+    color: black; /* Sets the text color */
+}
+
+.footer-links a {
+    color: black; /* Sets the text color */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Adds underline on hover for visual feedback */
+}
+
+
+.red { color: red; }
+.yellow { color: goldenrod; }
+.blue { color: blue; }
+.green { color: green; }
+.purple { color: purple; }
+
+/* Mobile devices */
+@media (max-width: 600px) {
+    .container {
+        font-size: 2.5em; /* Slightly smaller, but still a header size */
+    }
+}

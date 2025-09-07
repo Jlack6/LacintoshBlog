@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Lacintosh</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Lacintosh, your go-to source for software testing and quality assurance insights. Stay up-to-date with the latest trends in test automation, agile testing, and continuous integration. Our expert tips cover everything from test management and defect tracking to user acceptance testing and test reporting. Explore our comprehensive guide to quality assurance and take your testing process to the next level with Lacintosh.">
+    <meta name="keywords" content="Quality assurance, Software testing, Test automation, Continuous integration, Agile testing, Test management, Test cases, Test plan, Regression testing, Performance testing, User acceptance testing, Defect tracking, Test metrics, Test reporting, Test environment, Test data management, Functional testing, Non-functional testing, Exploratory testing, Test-driven development, Behavior-driven development, Code coverage, Code review, Code quality, DevOps testing">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="indexCSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var f = document.getElementById('Foo');
+            setInterval(function() {
+                f.style.display = (f.style.display == 'none' ? '' : 'none');
+            }, 800);
+        });
+    </script>
+</head>
+<body>
+    <div id="nav">
+        <nav class="customNav fixed" id="top">
+            <ul>
+                <li class="logoPad">Lacintosh$</li>
+                <li class="logoPad" id="Foo">|</li>
+                <li class="link navButtons"></li>
+                <li class="right link navButtons logoPad"><a href="https://www.linkedin.com/in/james-lack-66a046a3?original_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank"><span class="fa fa-linkedin" style="font-size:24px"></span></a></li>
+                <li id="hamburger"><span style="font-size:30px;" class="icon">&#9776;</span></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="textNav">
+        About Me
+    </div>
+    <div id="textNavTwo">
+        Scrib Notes App
+    </div>
+    <div id="container">
+        Articles
+    </div>
+    <div id="articles-list"></div>
+</body>
+<script>
+    // Get a reference to the <ul> element where we will add the links
+    const articlesList = document.getElementById("articles-list");
+
+    // Define the path to the "articles" folder and retrieve all HTML files
+    const articlesPath = "articles/";
+    const articleFiles = ["the_journey.html","a_good_project.html","question_and_answer_engineer.html"]; // replace with your file names
+
+    articleFiles.forEach(file => {
+        // Create a <li> element to hold the link
+        const li = document.createElement("p");
+
+        // Extract the article title from the file name and capitalize each word
+        const title = file.replace(".html", "").replace(/_/g, " ");
+        const capitalizedTitle = title.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+
+        // Create the link itself
+        const link = document.createElement("a");
+        link.id = "articleCss";
+        link.href = articlesPath + file;
+        link.innerText = capitalizedTitle;
+
+        // Append the link to the <li> element and the <li> element to the <ul> element
+        li.appendChild(link);
+        articlesList.appendChild(li);
+
+        // Add a line break after the link
+    });
+
+    var myDiv = document.getElementById("textNav");
+    myDiv.addEventListener("click", function() {
+      window.location.href = "aboutMe.html";
+    });
+
+    var myDivTwo = document.getElementById("textNavTwo");
+    myDivTwo.addEventListener("click", function() {
+      window.location.href = "scribNotes.html";
+    });
+
+  </script>
+</html>
